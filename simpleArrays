@@ -1,0 +1,4 @@
+utilisateurs=("rida" "adam" "safa" "fatima")
+for var in ${utilisateurs[@]}; do
+	echo the user is $var
+done
