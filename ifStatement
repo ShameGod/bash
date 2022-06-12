@@ -1,0 +1,9 @@
+read price
+echo $price
+
+if [[ $price >30 ]]; 
+	then
+	echo "this is too expensive !"
+else
+	echo "not so expensive :)"
+fi
