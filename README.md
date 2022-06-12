@@ -50,8 +50,45 @@ to search for something in a file, text or command response :
   - -i: to ignore the case 
   - -c: to count the number of instances 
 
-## Nested command lines in bash 
+### Nested command lines in bash 
 
 It is possible to chain commands such as 
 
 ``` echo here is the list of the files in this directory $(ls -l) ```
+
+
+## Users control with bash 
+
+### adduser, addgroup, deluser and delgroup
+adduser creates a new user, and creates a file in the home directory
+addgroup creates a new groupe, to add a user to the group we use the command : ```usermod -g [groupName] [userName]```
+delgroupe to delete a group 
+deluser to delete a user, you need to add "--remove-home" to remove the directory related to the user 
+
+### file access parameters 
+When executing the command ls -l, we get the following line 
+![image](https://user-images.githubusercontent.com/42012627/173235694-89153857-66ea-4054-9845-73eab88b8908.png)
+
+on the left of every file are the permissions to access it. there are 3 groups of them : 
+![image](https://user-images.githubusercontent.com/42012627/173235769-b8189d91-3073-4e1c-a0df-6a5c69ff951d.png)
+
+Ignore the first "d", it just indicates that this is a directory
+1- The first group indicates the permissions for the user : 
+  - w : write permission
+  - r : read permission
+  - x : execute permission 
+2- The second group indicates the permissions for the group where the user belongs 
+3- The last group indicates the permissions for other users 
+
+### chown and chgrp : 
+these command are here to transfer the permissions from a user to another and from a group to another
+
+### chmod : 
+This is the main command that changes the permissions of a file. It has the following syntax : 
+``` sudo chmod [entity] [operation] [permission] ```
+  - entity : it can have 3 values (u  for user, g for group, o for other)
+  - operation : it can have 2 values (+ to add permissions, - to remove permissions)
+  - permission : it can have 3 values and it is cumulative (w to write, r to read and x to execute)  
+
+
+
