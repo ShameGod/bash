@@ -1,0 +1,3 @@
+for var in {rida,adam,brahim,fatima}; do
+	echo user $var
+done
