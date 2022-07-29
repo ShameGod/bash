@@ -150,3 +150,12 @@ for var in ${utilisateurs[@]}; do
 done
 ```
 ##### Be careful the white space can cause errors when declaring your arrays, there shouldn't be any white space between the "=" and "("
+
+
+### the pipe operation | : 
+
+This operation is used to send the result of a command as an input to the next one : 
+for example 
+```
+ls -1 |while read filename; do echo "here is a file "; done
+```
