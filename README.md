@@ -159,3 +159,6 @@ for example
 ```
 ls -1 |while read filename; do echo "here is a file "; done
 ```
+
+### && and ; operator : 
+To run a command after the other, we can either use ';' or '&&'. The difference is that if a command fails with ';' the following one will still bne executed, while with '&&' all the following command will not be executed 
