@@ -56,6 +56,13 @@ It is possible to chain commands such as
 
 ``` echo here is the list of the files in this directory $(ls -l) ```
 
+## Commands to monitor applications : 
+
+### df -h
+returns stats about the disc. example : 
+```
+df -h /data 
+```
 
 ## Users control with bash 
 
